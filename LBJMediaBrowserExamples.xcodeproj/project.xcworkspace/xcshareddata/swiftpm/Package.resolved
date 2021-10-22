@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
+        }
+      },
+      {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage.git",
+        "state": {
+          "branch": null,
+          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "LBJImagePreviewer",
+        "repositoryURL": "https://github.com/Lebron1992/LBJImagePreviewer",
+        "state": {
+          "branch": "main",
+          "revision": "09623c0c18664b3feefd04a20fc77692cc532b59",
+          "version": null
+        }
+      },
+      {
+        "package": "LBJMediaBrowser",
+        "repositoryURL": "/Users/lebron/Documents/lebron/my-projects/LBJMediaBrowser",
+        "state": {
+          "branch": "main",
+          "revision": "6a841930f6c9d78c8448371a2fc52d13b74e81c4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -11,6 +11,23 @@
 		FD749FF72717E1E70084F832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD749FF62717E1E70084F832 /* ContentView.swift */; };
 		FD749FF92717E1EF0084F832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD749FF82717E1EF0084F832 /* Assets.xcassets */; };
 		FD749FFC2717E1EF0084F832 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD749FFB2717E1EF0084F832 /* Preview Assets.xcassets */; };
+		FD74A0032717E2280084F832 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74A0022717E2280084F832 /* Example.swift */; };
+		FD74A005271819B90084F832 /* ForBiggerFun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FD74A004271819B80084F832 /* ForBiggerFun.mp4 */; };
+		FD74A00A27181BC00084F832 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74A00927181BC00084F832 /* MockData.swift */; };
+		FD74A00D2718202A0084F832 /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD74A00C2718202A0084F832 /* LBJMediaBrowser */; };
+		FDA70D3C2718434A0058273D /* MyMediaUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3B2718434A0058273D /* MyMediaUIImage.swift */; };
+		FDA70D3E2718443C0058273D /* MyMediaURLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3D2718443C0058273D /* MyMediaURLImage.swift */; };
+		FDA70D40271844AF0058273D /* MyMediaPHAssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3F271844AF0058273D /* MyMediaPHAssetImage.swift */; };
+		FDA70D44271844FF0058273D /* MyMediaURLVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D43271844FF0058273D /* MyMediaURLVideo.swift */; };
+		FDA70D46271845820058273D /* MyMediaPHAssetVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D45271845820058273D /* MyMediaPHAssetVideo.swift */; };
+		FDA70D4F271929BA0058273D /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D4E271929BA0058273D /* ExampleViewModel.swift */; };
+		FDA70D58271932290058273D /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D57271932290058273D /* ExampleView.swift */; };
+		FDA70D5E271D1D790058273D /* MyPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D5D271D1D790058273D /* MyPlaceholderView.swift */; };
+		FDA70D60271D1DAC0058273D /* MyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D5F271D1DAC0058273D /* MyProgressView.swift */; };
+		FDA70D62271D2A0B0058273D /* MyErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D61271D2A0B0058273D /* MyErrorView.swift */; };
+		FDA70D64271D2C060058273D /* MyPagingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D63271D2C060058273D /* MyPagingContentView.swift */; };
+		FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D65271D2CFD0058273D /* MyMedia.swift */; };
+		FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D67271D309F0058273D /* MyGridContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +36,22 @@
 		FD749FF62717E1E70084F832 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD749FF82717E1EF0084F832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD749FFB2717E1EF0084F832 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD74A0022717E2280084F832 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		FD74A004271819B80084F832 /* ForBiggerFun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ForBiggerFun.mp4; sourceTree = "<group>"; };
+		FD74A00927181BC00084F832 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		FDA70D3B2718434A0058273D /* MyMediaUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaUIImage.swift; sourceTree = "<group>"; };
+		FDA70D3D2718443C0058273D /* MyMediaURLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaURLImage.swift; sourceTree = "<group>"; };
+		FDA70D3F271844AF0058273D /* MyMediaPHAssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaPHAssetImage.swift; sourceTree = "<group>"; };
+		FDA70D43271844FF0058273D /* MyMediaURLVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaURLVideo.swift; sourceTree = "<group>"; };
+		FDA70D45271845820058273D /* MyMediaPHAssetVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMediaPHAssetVideo.swift; sourceTree = "<group>"; };
+		FDA70D4E271929BA0058273D /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
+		FDA70D57271932290058273D /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		FDA70D5D271D1D790058273D /* MyPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceholderView.swift; sourceTree = "<group>"; };
+		FDA70D5F271D1DAC0058273D /* MyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressView.swift; sourceTree = "<group>"; };
+		FDA70D61271D2A0B0058273D /* MyErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyErrorView.swift; sourceTree = "<group>"; };
+		FDA70D63271D2C060058273D /* MyPagingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagingContentView.swift; sourceTree = "<group>"; };
+		FDA70D65271D2CFD0058273D /* MyMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMedia.swift; sourceTree = "<group>"; };
+		FDA70D67271D309F0058273D /* MyGridContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGridContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD74A00D2718202A0084F832 /* LBJMediaBrowser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +85,12 @@
 		FD749FF32717E1E70084F832 /* LBJMediaBrowserExamples */ = {
 			isa = PBXGroup;
 			children = (
+				FDA70D4E271929BA0058273D /* ExampleViewModel.swift */,
 				FD749FF42717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift */,
-				FD749FF62717E1E70084F832 /* ContentView.swift */,
-				FD749FF82717E1EF0084F832 /* Assets.xcassets */,
+				FD74A00727181B970084F832 /* DataModels */,
 				FD749FFA2717E1EF0084F832 /* Preview Content */,
+				FD74A006271819EA0084F832 /* Resources */,
+				FDA70D54271931F80058273D /* Views */,
 			);
 			path = LBJMediaBrowserExamples;
 			sourceTree = "<group>";
@@ -65,6 +101,68 @@
 				FD749FFB2717E1EF0084F832 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD74A006271819EA0084F832 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD749FF82717E1EF0084F832 /* Assets.xcassets */,
+				FD74A004271819B80084F832 /* ForBiggerFun.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD74A00727181B970084F832 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				FD74A0022717E2280084F832 /* Example.swift */,
+				FD74A00927181BC00084F832 /* MockData.swift */,
+				FDA70D65271D2CFD0058273D /* MyMedia.swift */,
+				FDA70D41271844DE0058273D /* Image */,
+				FDA70D42271844EB0058273D /* Video */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		FDA70D41271844DE0058273D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				FDA70D3B2718434A0058273D /* MyMediaUIImage.swift */,
+				FDA70D3D2718443C0058273D /* MyMediaURLImage.swift */,
+				FDA70D3F271844AF0058273D /* MyMediaPHAssetImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		FDA70D42271844EB0058273D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				FDA70D43271844FF0058273D /* MyMediaURLVideo.swift */,
+				FDA70D45271845820058273D /* MyMediaPHAssetVideo.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		FDA70D54271931F80058273D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD749FF62717E1E70084F832 /* ContentView.swift */,
+				FDA70D57271932290058273D /* ExampleView.swift */,
+				FDA70D5C271D1D570058273D /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDA70D5C271D1D570058273D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FDA70D61271D2A0B0058273D /* MyErrorView.swift */,
+				FDA70D67271D309F0058273D /* MyGridContentView.swift */,
+				FDA70D63271D2C060058273D /* MyPagingContentView.swift */,
+				FDA70D5D271D1D790058273D /* MyPlaceholderView.swift */,
+				FDA70D5F271D1DAC0058273D /* MyProgressView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +181,9 @@
 			dependencies = (
 			);
 			name = LBJMediaBrowserExamples;
+			packageProductDependencies = (
+				FD74A00C2718202A0084F832 /* LBJMediaBrowser */,
+			);
 			productName = LBJMediaBrowserExamples;
 			productReference = FD749FF12717E1E70084F832 /* LBJMediaBrowserExamples.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +212,9 @@
 				Base,
 			);
 			mainGroup = FD749FE82717E1E70084F832;
+			packageReferences = (
+				FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
+			);
 			productRefGroup = FD749FF22717E1E70084F832 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD74A005271819B90084F832 /* ForBiggerFun.mp4 in Resources */,
 				FD749FFC2717E1EF0084F832 /* Preview Assets.xcassets in Resources */,
 				FD749FF92717E1EF0084F832 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +242,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA70D4F271929BA0058273D /* ExampleViewModel.swift in Sources */,
+				FDA70D44271844FF0058273D /* MyMediaURLVideo.swift in Sources */,
+				FDA70D58271932290058273D /* ExampleView.swift in Sources */,
+				FDA70D5E271D1D790058273D /* MyPlaceholderView.swift in Sources */,
+				FDA70D40271844AF0058273D /* MyMediaPHAssetImage.swift in Sources */,
+				FDA70D3C2718434A0058273D /* MyMediaUIImage.swift in Sources */,
+				FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */,
 				FD749FF72717E1E70084F832 /* ContentView.swift in Sources */,
+				FDA70D62271D2A0B0058273D /* MyErrorView.swift in Sources */,
+				FDA70D3E2718443C0058273D /* MyMediaURLImage.swift in Sources */,
+				FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */,
+				FDA70D64271D2C060058273D /* MyPagingContentView.swift in Sources */,
+				FD74A00A27181BC00084F832 /* MockData.swift in Sources */,
 				FD749FF52717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift in Sources */,
+				FDA70D46271845820058273D /* MyMediaPHAssetVideo.swift in Sources */,
+				FDA70D60271D1DAC0058273D /* MyProgressView.swift in Sources */,
+				FD74A0032717E2280084F832 /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +392,7 @@
 				DEVELOPMENT_TEAM = PDS2N83HDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access to photo library is needed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +423,7 @@
 				DEVELOPMENT_TEAM = PDS2N83HDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access to photo library is needed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/lebron/Documents/lebron/my-projects/LBJMediaBrowser";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD74A00C2718202A0084F832 /* LBJMediaBrowser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
+			productName = LBJMediaBrowser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD749FE92717E1E70084F832 /* Project object */;
 }
