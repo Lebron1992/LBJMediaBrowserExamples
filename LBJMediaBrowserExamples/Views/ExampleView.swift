@@ -14,8 +14,12 @@ struct ExampleView: View {
   }
 
   var body: some View {
-    destination(for: example)
-      .onAppear(perform: viewModel.generateMedias)
+    if viewModel.medias.isEmpty {
+      Text("")
+        .onAppear(perform: viewModel.generateMedias)
+    } else {
+      destination(for: example)
+    }
   }
 
   @ViewBuilder
@@ -27,7 +31,7 @@ struct ExampleView: View {
       case .customGrid:
         LBJGridMediaBrowser(
           medias: viewModel.medias,
-          placeholder: { MyPlaceholderView() },
+          placeholder: { MyPlaceholderView(media: $0) },
           progress: {
             MyProgressView(progress: $0)
               .foregroundColor(.white)
@@ -56,7 +60,7 @@ struct ExampleView: View {
         }()
         LBJPagingMediaBrowser(
           browser: browser,
-          placeholder: { MyPlaceholderView() },
+          placeholder: { MyPlaceholderView(media: $0) },
           progress: {
             MyProgressView(progress: $0)
               .foregroundColor(.white)
