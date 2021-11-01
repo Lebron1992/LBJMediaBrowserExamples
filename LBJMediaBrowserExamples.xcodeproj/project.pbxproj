@@ -14,7 +14,6 @@
 		FD74A0032717E2280084F832 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74A0022717E2280084F832 /* Example.swift */; };
 		FD74A005271819B90084F832 /* ForBiggerFun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FD74A004271819B80084F832 /* ForBiggerFun.mp4 */; };
 		FD74A00A27181BC00084F832 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74A00927181BC00084F832 /* MockData.swift */; };
-		FD74A00D2718202A0084F832 /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD74A00C2718202A0084F832 /* LBJMediaBrowser */; };
 		FDA70D3C2718434A0058273D /* MyMediaUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3B2718434A0058273D /* MyMediaUIImage.swift */; };
 		FDA70D3E2718443C0058273D /* MyMediaURLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3D2718443C0058273D /* MyMediaURLImage.swift */; };
 		FDA70D40271844AF0058273D /* MyMediaPHAssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D3F271844AF0058273D /* MyMediaPHAssetImage.swift */; };
@@ -28,6 +27,7 @@
 		FDA70D64271D2C060058273D /* MyPagingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D63271D2C060058273D /* MyPagingContentView.swift */; };
 		FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D65271D2CFD0058273D /* MyMedia.swift */; };
 		FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D67271D309F0058273D /* MyGridContentView.swift */; };
+		FDFCE8E6272FD2AC0051A97F /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FDFCE8E5272FD2AC0051A97F /* LBJMediaBrowser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD74A00D2718202A0084F832 /* LBJMediaBrowser in Frameworks */,
+				FDFCE8E6272FD2AC0051A97F /* LBJMediaBrowser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			);
 			name = LBJMediaBrowserExamples;
 			packageProductDependencies = (
-				FD74A00C2718202A0084F832 /* LBJMediaBrowser */,
+				FDFCE8E5272FD2AC0051A97F /* LBJMediaBrowser */,
 			);
 			productName = LBJMediaBrowserExamples;
 			productReference = FD749FF12717E1E70084F832 /* LBJMediaBrowserExamples.app */;
@@ -213,7 +213,7 @@
 			);
 			mainGroup = FD749FE82717E1E70084F832;
 			packageReferences = (
-				FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
+				FDFCE8E4272FD2AC0051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
 			);
 			productRefGroup = FD749FF22717E1E70084F832 /* Products */;
 			projectDirPath = "";
@@ -467,9 +467,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
+		FDFCE8E4272FD2AC0051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/lebron/Documents/lebron/my-projects/LBJMediaBrowser";
+			repositoryURL = "https://github.com/Lebron1992/LBJMediaBrowser";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -478,9 +478,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD74A00C2718202A0084F832 /* LBJMediaBrowser */ = {
+		FDFCE8E5272FD2AC0051A97F /* LBJMediaBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FD74A00B2718202A0084F832 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
+			package = FDFCE8E4272FD2AC0051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
 			productName = LBJMediaBrowser;
 		};
 /* End XCSwiftPackageProductDependency section */
