@@ -30,10 +30,10 @@
       },
       {
         "package": "LBJMediaBrowser",
-        "repositoryURL": "https://github.com/Lebron1992/LBJMediaBrowser",
+        "repositoryURL": "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser",
         "state": {
-          "branch": "main",
-          "revision": "d869de20c9f20d13f21f38931ed19953c7250f90",
+          "branch": "develop",
+          "revision": "ba8361499219d8e841047b0082d7c82e84d3b9b8",
           "version": null
         }
       }
