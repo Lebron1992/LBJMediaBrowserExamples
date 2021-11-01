@@ -58,20 +58,43 @@ struct ExampleView: View {
           browser.autoPlayVideo = true
           return browser
         }()
-        LBJPagingMediaBrowser(
-          browser: browser,
-          placeholder: { MyPlaceholderView(media: $0) },
-          progress: {
-            MyProgressView(progress: $0)
-              .foregroundColor(.white)
-              .frame(width: 100, height: 100)
-          },
-          failure: {
-            MyErrorView(error: $0)
-              .font(.system(size: 16))
-          },
-          content: { MyPagingContentView(result: $0) }
-        )
+        VStack {
+          LBJPagingMediaBrowser(
+            browser: browser,
+            placeholder: { MyPlaceholderView(media: $0) },
+            progress: {
+              MyProgressView(progress: $0)
+                .foregroundColor(.white)
+                .frame(width: 100, height: 100)
+            },
+            failure: {
+              MyErrorView(error: $0)
+                .font(.system(size: 16))
+            },
+            content: { MyPagingContentView(result: $0) }
+          )
+          HStack {
+            Spacer()
+            Button {
+              browser.setCurrentPage(browser.currentPage - 1)
+            } label: {
+              Text("Prev")
+            }
+            Spacer()
+            Button {
+              browser.setCurrentPage(Int.random(in: 0..<browser.medias.count))
+            } label: {
+              Text("Random")
+            }
+            Spacer()
+            Button {
+              browser.setCurrentPage(browser.currentPage + 1)
+            } label: {
+              Text("Next")
+            }
+            Spacer()
+          }
+        }
       }
   }
 }
