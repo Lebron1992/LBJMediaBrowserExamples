@@ -14,12 +14,8 @@ struct ExampleView: View {
   }
 
   var body: some View {
-    if viewModel.medias.isEmpty {
-      Text("")
-        .onAppear(perform: viewModel.generateMedias)
-    } else {
-      destination(for: example)
-    }
+    destination(for: example)
+      .onAppear(perform: viewModel.generateMedias)
   }
 
   @ViewBuilder

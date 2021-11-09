@@ -3,6 +3,7 @@ import LBJMediaBrowser
 
 struct MyPlaceholderView: View {
   let media: MediaType
+
   var body: some View {
     Group {
       switch media {

@@ -3,4 +3,22 @@
    uuid = "A17BDC03-0E7E-4993-9F42-839605488857"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0864B2CD-EECA-4642-9D87-A348C8833A17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Library/Developer/Xcode/DerivedData/LBJMediaBrowserExamples-hkcatmhxgwqrfcdxtmknkpjejyac/SourcePackages/checkouts/LBJMediaBrowser/Sources/LBJMediaBrowser/Paging/LBJPagingBrowser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "imageStatus(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

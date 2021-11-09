@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD4A776F273AC4F100D9E0E8 /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD4A776E273AC4F100D9E0E8 /* LBJMediaBrowser */; };
 		FD749FF52717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD749FF42717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift */; };
 		FD749FF72717E1E70084F832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD749FF62717E1E70084F832 /* ContentView.swift */; };
 		FD749FF92717E1EF0084F832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD749FF82717E1EF0084F832 /* Assets.xcassets */; };
@@ -27,7 +28,6 @@
 		FDA70D64271D2C060058273D /* MyPagingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D63271D2C060058273D /* MyPagingContentView.swift */; };
 		FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D65271D2CFD0058273D /* MyMedia.swift */; };
 		FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D67271D309F0058273D /* MyGridContentView.swift */; };
-		FDFCE8EC272FE8B10051A97F /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FDFCE8EB272FE8B10051A97F /* LBJMediaBrowser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFCE8EC272FE8B10051A97F /* LBJMediaBrowser in Frameworks */,
+				FD4A776F273AC4F100D9E0E8 /* LBJMediaBrowser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			);
 			name = LBJMediaBrowserExamples;
 			packageProductDependencies = (
-				FDFCE8EB272FE8B10051A97F /* LBJMediaBrowser */,
+				FD4A776E273AC4F100D9E0E8 /* LBJMediaBrowser */,
 			);
 			productName = LBJMediaBrowserExamples;
 			productReference = FD749FF12717E1E70084F832 /* LBJMediaBrowserExamples.app */;
@@ -213,7 +213,7 @@
 			);
 			mainGroup = FD749FE82717E1E70084F832;
 			packageReferences = (
-				FDFCE8EA272FE8B10051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
+				FD4A776D273AC4F100D9E0E8 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
 			);
 			productRefGroup = FD749FF22717E1E70084F832 /* Products */;
 			projectDirPath = "";
@@ -467,20 +467,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FDFCE8EA272FE8B10051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
+		FD4A776D273AC4F100D9E0E8 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser";
+			repositoryURL = "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser";
 			requirement = {
-				branch = develop;
+				branch = "grid-fix";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FDFCE8EB272FE8B10051A97F /* LBJMediaBrowser */ = {
+		FD4A776E273AC4F100D9E0E8 /* LBJMediaBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FDFCE8EA272FE8B10051A97F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
+			package = FD4A776D273AC4F100D9E0E8 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
 			productName = LBJMediaBrowser;
 		};
 /* End XCSwiftPackageProductDependency section */
