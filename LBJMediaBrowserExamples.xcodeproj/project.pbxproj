@@ -471,7 +471,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser";
 			requirement = {
-				branch = "grid-fix";
+				branch = main;
 				kind = branch;
 			};
 		};
