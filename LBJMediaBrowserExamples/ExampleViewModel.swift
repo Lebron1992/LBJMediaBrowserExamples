@@ -11,7 +11,7 @@ final class ExampleViewModel: ObservableObject {
   }
 
   @Published
-  private(set) var medias: [MediaType] = []
+  private(set) var medias: [Media] = []
 
   func generateMedias() {
     PHPhotoLibrary.requestAuthorization { status in
@@ -31,7 +31,7 @@ final class ExampleViewModel: ObservableObject {
   }
 
   private func mixPHAssetsAndMockData() {
-    var assetMedias: [MediaType] = []
+    var assetMedias: [Media] = []
     let result = PHAsset.fetchAssets(with: nil)
 
     (0..<result.count).forEach { index in

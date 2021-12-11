@@ -54,7 +54,7 @@ extension MockData {
   }()
 
   static let mixedMedias = [uiImages, urlImages, urlVideos]
-    .compactMap { $0 as? [MediaType] }
+    .compactMap { $0 as? [Media] }
     .reduce([], +)
 }
 
@@ -88,6 +88,6 @@ extension MockData {
   }()
 
   static let mixedMyMedias = [myUIImages, myURLImages, myURLVideos]
-    .compactMap { $0 as? [MediaType] }
+    .compactMap { $0 as? [Media] }
     .reduce([], +)
 }

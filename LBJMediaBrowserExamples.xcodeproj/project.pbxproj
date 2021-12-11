@@ -471,8 +471,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = revision;
+				revision = 74b9f2544dcb90757481268bf837d884b549b099;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

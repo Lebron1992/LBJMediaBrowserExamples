@@ -32,8 +32,8 @@
         "package": "LBJMediaBrowser",
         "repositoryURL": "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser",
         "state": {
-          "branch": "main",
-          "revision": "848e5fc2c073d25eede1bdcf5106b0ef970d32a5",
+          "branch": null,
+          "revision": "74b9f2544dcb90757481268bf837d884b549b099",
           "version": null
         }
       }

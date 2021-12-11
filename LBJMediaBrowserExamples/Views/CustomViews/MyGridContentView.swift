@@ -16,7 +16,7 @@ struct MyGridContentView: View {
   }
 
   func view(
-    for image: MediaImageType,
+    for image: MediaImage,
     withUIImage uiImage: UIImage,
     in geometry: GeometryProxy
   ) -> some View {
@@ -34,7 +34,7 @@ struct MyGridContentView: View {
   }
 
   func view(
-    for video: MediaVideoType,
+    for video: MediaVideo,
     withPreviewImage previewImage: UIImage?,
     in geometry: GeometryProxy
   ) -> some View {
