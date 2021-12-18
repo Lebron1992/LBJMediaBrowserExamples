@@ -472,7 +472,7 @@
 			repositoryURL = "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser";
 			requirement = {
 				kind = revision;
-				revision = 74b9f2544dcb90757481268bf837d884b549b099;
+				revision = a649b239bc1d2b2d46645f49b6bca4867bef973a;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

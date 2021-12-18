@@ -63,9 +63,9 @@ struct ExampleView: View {
                 .foregroundColor(.white)
                 .frame(width: 100, height: 100)
             },
-            failure: {
-              MyErrorView(error: $0)
-                .font(.system(size: 16))
+            failure: { error, retry in
+              MyErrorView(error: error, retry: retry)
+                  .font(.system(size: 16))
             },
             content: { MyPagingContentView(result: $0) }
           )
