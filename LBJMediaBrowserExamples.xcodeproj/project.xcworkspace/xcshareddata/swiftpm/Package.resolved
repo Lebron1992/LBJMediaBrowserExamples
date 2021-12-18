@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
         }
       },
       {
@@ -30,9 +30,9 @@
       },
       {
         "package": "LBJMediaBrowser",
-        "repositoryURL": "/Users/lebron/Documents/Lebron/my-projects/LBJMediaBrowser",
+        "repositoryURL": "https://github.com/Lebron1992/LBJMediaBrowser",
         "state": {
-          "branch": null,
+          "branch": "main",
           "revision": "a649b239bc1d2b2d46645f49b6bca4867bef973a",
           "version": null
         }
