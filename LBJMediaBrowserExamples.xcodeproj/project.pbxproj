@@ -27,7 +27,7 @@
 		FDA70D64271D2C060058273D /* MyPagingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D63271D2C060058273D /* MyPagingContentView.swift */; };
 		FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D65271D2CFD0058273D /* MyMedia.swift */; };
 		FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D67271D309F0058273D /* MyGridContentView.swift */; };
-		FDBF63C1276E204E00A813CA /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FDBF63C0276E204E00A813CA /* LBJMediaBrowser */; };
+		FDD099042781E4E10002795F /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FDD099032781E4E10002795F /* LBJMediaBrowser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDBF63C1276E204E00A813CA /* LBJMediaBrowser in Frameworks */,
+				FDD099042781E4E10002795F /* LBJMediaBrowser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			);
 			name = LBJMediaBrowserExamples;
 			packageProductDependencies = (
-				FDBF63C0276E204E00A813CA /* LBJMediaBrowser */,
+				FDD099032781E4E10002795F /* LBJMediaBrowser */,
 			);
 			productName = LBJMediaBrowserExamples;
 			productReference = FD749FF12717E1E70084F832 /* LBJMediaBrowserExamples.app */;
@@ -213,7 +213,7 @@
 			);
 			mainGroup = FD749FE82717E1E70084F832;
 			packageReferences = (
-				FDBF63BF276E204E00A813CA /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
+				FDD099022781E4E10002795F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
 			);
 			productRefGroup = FD749FF22717E1E70084F832 /* Products */;
 			projectDirPath = "";
@@ -467,7 +467,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FDBF63BF276E204E00A813CA /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
+		FDD099022781E4E10002795F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lebron1992/LBJMediaBrowser";
 			requirement = {
@@ -478,9 +478,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FDBF63C0276E204E00A813CA /* LBJMediaBrowser */ = {
+		FDD099032781E4E10002795F /* LBJMediaBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FDBF63BF276E204E00A813CA /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
+			package = FDD099022781E4E10002795F /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
 			productName = LBJMediaBrowser;
 		};
 /* End XCSwiftPackageProductDependency section */
