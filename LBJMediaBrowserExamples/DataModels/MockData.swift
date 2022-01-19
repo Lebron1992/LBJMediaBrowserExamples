@@ -4,6 +4,7 @@ import LBJMediaBrowser
 private let imageUrls = [
   "https://i.picsum.photos/id/249/1000/2000.jpg?hmac=LuHPEUVkziRf9usKW97DBxEzcifzgiCiRtm8vuJNZ9Q",
   "https://i.picsum.photos/id/17/1000/1000.jpg?hmac=5FRnLOBphDqiw_x9GZSSzNW0nfUgQ7kAVZdigKUxZvg",
+  "https://media1.giphy.com/media/3o6Mbbs879ozZ9Yic0/giphy.gif?cid=790b7611f1db1ba27ec414c5d5b14fa0e0b6a1e216267dd0&rid=giphy.gif&ct=g",
   "https://www.example.com/test.png",
   "https://i.picsum.photos/id/62/1000/1500.jpg?hmac=6RG38x1oSbkw0aEoiHACAHEbUczQo_wXH22k0EWrueg",
   "https://i.picsum.photos/id/573/2000/3000.jpg?hmac=zWDJVoZPjb0L4jo_u7oXLC4m1dVJdI6Taoqu_6Ur1fM",
@@ -32,6 +33,8 @@ extension MockData {
     .compactMap { UIImage(named: "IMG_000\($0)") }
     .map { MediaUIImage(uiImage: $0) }
 
+  static let gifImages: [MediaGifImage] = ["lebron", "curry"].map { MediaGifImage(source: .bundle(name: $0, bundle: .main)) }
+
   static let urlImages = imageUrls
     .map { MediaURLImage(imageUrl: URL(string: $0)!) }
 
@@ -53,7 +56,7 @@ extension MockData {
     return videos
   }()
 
-  static let mixedMedias = [uiImages, urlImages, urlVideos]
+  static let mixedMedias = [uiImages, gifImages, urlImages, urlVideos]
     .compactMap { $0 as? [Media] }
     .reduce([], +)
 }
@@ -63,6 +66,8 @@ extension MockData {
   static let myUIImages: [MyMediaUIImage] = (1...3)
     .map { (UIImage(named: "IMG_000\($0)")!, "UIImage \($0)") }
     .map { MyMediaUIImage(uiImage: $0.0, caption: $0.1) }
+
+  static let myGifImages: [MyMediaGifImage] = ["lebron", "curry"].map { MyMediaGifImage(source: .bundle(name: $0, bundle: .main), caption: $0) }
 
   static let myURLImages = imageUrls.indices
     .map { MyMediaURLImage(imageUrl: URL(string: imageUrls[$0])!, caption: "URLImage \($0)") }
@@ -87,7 +92,7 @@ extension MockData {
     return videos
   }()
 
-  static let mixedMyMedias = [myUIImages, myURLImages, myURLVideos]
+  static let mixedMyMedias = [myUIImages, myGifImages, myURLImages, myURLVideos]
     .compactMap { $0 as? [Media] }
     .reduce([], +)
 }

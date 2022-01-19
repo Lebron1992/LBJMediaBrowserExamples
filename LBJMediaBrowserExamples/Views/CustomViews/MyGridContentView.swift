@@ -1,5 +1,6 @@
 import SwiftUI
 import LBJMediaBrowser
+import LBJImagePreviewer
 
 struct MyGridContentView: View {
   let result: MediaLoadedResult
@@ -7,8 +8,12 @@ struct MyGridContentView: View {
   var body: some View {
     GeometryReader { geometry in
       switch result {
-      case .image(let image, let uiImage):
+      case .stillImage(let image, let uiImage):
         view(for: image, withUIImage: uiImage, in: geometry)
+      case .gifImage(let image, let data):
+        if let uiImage = UIImage(data: data) {
+          view(for: image, withUIImage: uiImage, in: geometry)
+        }
       case .video(let video, let previewImage, _):
         view(for: video, withPreviewImage: previewImage, in: geometry)
       }

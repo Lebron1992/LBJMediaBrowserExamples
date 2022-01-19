@@ -12,8 +12,10 @@ struct MyPagingContentView: View {
   var body: some View {
     GeometryReader { geometry in
       switch result {
-      case .image(let image, let uiImage):
+      case .stillImage(let image, let uiImage):
         view(for: image, withUIImage: uiImage, in: geometry)
+      case .gifImage(let image, let data):
+        view(for: image, withData: data, in: geometry)
       case .video(let video, let previewImage, let videoUrl):
         view(for: video, withPreviewImage: previewImage, andVideoUrl: videoUrl,  in: geometry)
       }
@@ -28,6 +30,21 @@ struct MyPagingContentView: View {
 
     ZStack(alignment: .bottom) {
       LBJUIImagePreviewer(uiImage: uiImage)
+      if let media = image as? MyMedia {
+        captionView(for: media)
+      }
+    }
+    .frame(width: geometry.size.width, height: geometry.size.height)
+  }
+
+  func view(
+    for image: MediaImage,
+    withData data: Data,
+    in geometry: GeometryProxy
+  ) -> some View {
+
+    ZStack(alignment: .bottom) {
+      LBJGIFImagePreviewer(imageData: data)
       if let media = image as? MyMedia {
         captionView(for: media)
       }
