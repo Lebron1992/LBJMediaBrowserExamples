@@ -37,9 +37,32 @@ struct ExampleView: View {
             MyErrorView(error: $0)
               .font(.system(size: 10))
           },
-          content: { MyGridContentView(result: $0) }
+          content: { MyGridContentView(result: $0) },
+          pagingMediaBrowser: { page in
+            let browser: LBJPagingBrowser = {
+              let browser = LBJPagingBrowser(medias: viewModel.medias, currentPage: page)
+              browser.autoPlayVideo = true
+              return browser
+            }()
+            return AnyView(
+              LBJPagingMediaBrowser(
+                browser: browser,
+                placeholder: { MyPlaceholderView(media: $0) },
+                progress: {
+                  MyProgressView(progress: $0)
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 100)
+                },
+                failure: { error, retry in
+                  MyErrorView(error: error, retry: retry)
+                      .font(.system(size: 16))
+                },
+                content: { MyPagingContentView(result: $0) }
+              )
+            )
+          }
         )
-          .minItemSize(100) // 80 by default
+          .minItemSize(.init(width: 100, height: 200)) // (80, 80) by default
           .itemSpacing(4)   // 2 by default
           .browseInPagingOnTapItem(true) // true by default
           .autoPlayVideoInPaging(false) // false by default
