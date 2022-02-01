@@ -2,16 +2,40 @@ import Photos
 import SwiftUI
 import LBJMediaBrowser
 
+struct MediaSection: GridSection {
+  let title: String
+  let medias: [Media]
+
+  var id: String {
+    title
+  }
+  static func == (lhs: MediaSection, rhs: MediaSection) -> Bool {
+    lhs.id == rhs.id
+  }
+}
+
 final class ExampleViewModel: ObservableObject {
 
   private let example: Example
+  private(set) var dataSource: LBJGridMediaBrowserDataSource<MediaSection>
 
   init(example: Example) {
     self.example = example
+
+    let sections = [
+      MediaSection(title: "UIImages", medias: MockData.uiImages),
+      MediaSection(title: "URLImages", medias: MockData.urlImages),
+      MediaSection(title: "URLVideos", medias: MockData.urlVideos)
+    ]
+    self.dataSource = LBJGridMediaBrowserDataSource(
+      sections: sections,
+      headerProvider: { AnyView(Text($0.title)) }
+    )
   }
 
   @Published
   private(set) var medias: [Media] = []
+
 
   func generateMedias() {
     PHPhotoLibrary.requestAuthorization { status in
@@ -54,10 +78,11 @@ final class ExampleViewModel: ObservableObject {
       }
     }
 
-    if self.example.isCustom {
-      self.medias = MockData.mixedMyMedias + assetMedias
+    if example.isCustom {
+      medias = MockData.mixedMyMedias + assetMedias
     } else {
-      self.medias = MockData.mixedMedias + assetMedias
+      medias = MockData.mixedMedias + assetMedias
+      dataSource.appendSection(.init(title: "PHAssetMedias", medias: assetMedias))
     }
   }
 }

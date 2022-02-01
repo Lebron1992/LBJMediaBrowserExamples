@@ -22,7 +22,8 @@ struct ExampleView: View {
   func destination(for example: Example) -> some View {
       switch example {
       case .grid:
-        LBJGridMediaBrowser(medias: viewModel.medias)
+//        LBJGridMediaBrowser(medias: viewModel.medias)
+        LBJGridMediaBrowserTest(dataSource: viewModel.dataSource)
 
       case .customGrid:
         LBJGridMediaBrowser(
