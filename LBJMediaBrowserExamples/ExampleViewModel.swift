@@ -2,16 +2,78 @@ import Photos
 import SwiftUI
 import LBJMediaBrowser
 
+extension TitledGridSection {
+  static let uiImageTemplate = TitledGridSection(title: "UIImages", medias: MockData.uiImages)
+  static let urlImageTemplate = TitledGridSection(title: "URLImages", medias: MockData.urlImages)
+  static let urlVideoTemplate = TitledGridSection(title: "URLVideos", medias: MockData.urlVideos)
+  static let templates = [uiImageTemplate, urlImageTemplate, urlVideoTemplate]
+}
+
 final class ExampleViewModel: ObservableObject {
 
+  @Published
+  private(set) var medias: [Media]
+
   private let example: Example
+  let customGridDataSource: LBJGridMediaBrowserDataSource<TitledGridSection>
 
   init(example: Example) {
     self.example = example
-  }
+    self.medias = example.isCustom ? MockData.mixedMyMedias : MockData.mixedMedias
 
-  @Published
-  private(set) var medias: [Media] = []
+    customGridDataSource = LBJGridMediaBrowserDataSource(
+      sections: TitledGridSection.templates,
+      placeholderProvider: {
+        MyPlaceholderView(media: $0)
+          .asAnyView()
+      },
+      progressProvider: {
+        MyProgressView(progress: $0)
+          .foregroundColor(.white)
+          .frame(width: 40, height: 40)
+          .asAnyView()
+      },
+      failureProvider: {
+        MyErrorView(error: $0)
+          .font(.system(size: 10))
+          .asAnyView()
+      },
+      contentProvider: {
+        MyGridContentView(result: $0)
+          .asAnyView()
+      },
+      sectionHeaderProvider: {
+        Text($0.title)
+          .asAnyView()
+      },
+      pagingMediaBrowserProvider: { medias, page in
+        let dataSource = LBJPagingMediaBrowserDataSource(
+          medias: medias,
+          placeholderProvider: {
+            MyPlaceholderView(media: $0)
+              .asAnyView()
+          },
+          progressProvider: {
+            MyProgressView(progress: $0)
+              .foregroundColor(.white)
+              .frame(width: 100, height: 100)
+              .asAnyView()
+          },
+          failureProvider: { error, retry in
+            MyErrorView(error: error, retry: retry)
+              .font(.system(size: 16))
+              .asAnyView()
+          },
+          contentProvider: {
+            MyPagingContentView(result: $0)
+              .asAnyView()
+          })
+        let browser = LBJPagingBrowser(dataSource: dataSource, currentPage: page)
+        browser.autoPlayVideo = true
+        return LBJPagingMediaBrowser(browser: browser)
+      }
+    )
+  }
 
   func generateMedias() {
     PHPhotoLibrary.requestAuthorization { status in
@@ -20,11 +82,7 @@ final class ExampleViewModel: ObservableObject {
         case .authorized:
           self.mixPHAssetsAndMockData()
         default:
-          if self.example.isCustom {
-            self.medias = MockData.mixedMyMedias
-          } else {
-            self.medias = MockData.mixedMedias
-          }
+          break
         }
       }
     }
@@ -54,10 +112,11 @@ final class ExampleViewModel: ObservableObject {
       }
     }
 
-    if self.example.isCustom {
-      self.medias = MockData.mixedMyMedias + assetMedias
+    if example.isCustom {
+      medias = MockData.mixedMyMedias + assetMedias
+      customGridDataSource.append(TitledGridSection(title: "PHAssetMedias", medias: assetMedias))
     } else {
-      self.medias = MockData.mixedMedias + assetMedias
+      medias = MockData.mixedMedias + assetMedias
     }
   }
 }

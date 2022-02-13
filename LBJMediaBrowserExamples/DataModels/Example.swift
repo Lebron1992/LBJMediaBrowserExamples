@@ -18,13 +18,13 @@ enum Example: CaseIterable {
   var title: String {
     switch self {
     case .grid:
-      return "Grid Example"
+      return "Grid Single Section"
     case .customGrid:
-      return "Custom Grid Example"
+      return "Custom Grid Multiple Sections"
     case .paging:
-      return "Paging Example"
+      return "Paging"
     case .customPaging:
-      return "Custom Paging Example"
+      return "Custom Paging"
     }
   }
 }

@@ -22,50 +22,13 @@ struct ExampleView: View {
   func destination(for example: Example) -> some View {
       switch example {
       case .grid:
-        LBJGridMediaBrowser(medias: viewModel.medias)
+        LBJGridMediaBrowser(dataSource: .init(medias: viewModel.medias))
 
       case .customGrid:
-        LBJGridMediaBrowser(
-          medias: viewModel.medias,
-          placeholder: { MyPlaceholderView(media: $0) },
-          progress: {
-            MyProgressView(progress: $0)
-              .foregroundColor(.white)
-              .frame(width: 40, height: 40)
-          },
-          failure: {
-            MyErrorView(error: $0)
-              .font(.system(size: 10))
-          },
-          content: { MyGridContentView(result: $0) },
-          pagingMediaBrowser: { page in
-            let browser: LBJPagingBrowser = {
-              let browser = LBJPagingBrowser(medias: viewModel.medias, currentPage: page)
-              browser.autoPlayVideo = true
-              return browser
-            }()
-            return AnyView(
-              LBJPagingMediaBrowser(
-                browser: browser,
-                placeholder: { MyPlaceholderView(media: $0) },
-                progress: {
-                  MyProgressView(progress: $0)
-                    .foregroundColor(.white)
-                    .frame(width: 100, height: 100)
-                },
-                failure: { error, retry in
-                  MyErrorView(error: error, retry: retry)
-                      .font(.system(size: 16))
-                },
-                content: { MyPagingContentView(result: $0) }
-              )
-            )
-          }
-        )
+        LBJGridMediaBrowser(dataSource: viewModel.customGridDataSource)
           .minItemSize(.init(width: 100, height: 200)) // (80, 80) by default
           .itemSpacing(4)   // 2 by default
           .browseInPagingOnTapItem(true) // true by default
-          .autoPlayVideoInPaging(false) // false by default
 
       case .paging:
         let browser = LBJPagingBrowser(medias: viewModel.medias)
@@ -73,25 +36,34 @@ struct ExampleView: View {
 
       case .customPaging:
         let browser: LBJPagingBrowser = {
-          let browser = LBJPagingBrowser(medias: viewModel.medias)
+          let dataSource = LBJPagingMediaBrowserDataSource(
+            medias: viewModel.medias,
+            placeholderProvider: {
+              MyPlaceholderView(media: $0)
+                .asAnyView()
+            },
+            progressProvider: {
+              MyProgressView(progress: $0)
+                .foregroundColor(.white)
+                .frame(width: 100, height: 100)
+                .asAnyView()
+            },
+            failureProvider: { error, retry in
+              MyErrorView(error: error, retry: retry)
+                  .font(.system(size: 16))
+                  .asAnyView()
+            },
+            contentProvider: {
+              MyPagingContentView(result: $0)
+              .asAnyView()
+            }
+          )
+          let browser = LBJPagingBrowser(dataSource: dataSource)
           browser.autoPlayVideo = true
           return browser
         }()
         VStack {
-          LBJPagingMediaBrowser(
-            browser: browser,
-            placeholder: { MyPlaceholderView(media: $0) },
-            progress: {
-              MyProgressView(progress: $0)
-                .foregroundColor(.white)
-                .frame(width: 100, height: 100)
-            },
-            failure: { error, retry in
-              MyErrorView(error: error, retry: retry)
-                  .font(.system(size: 16))
-            },
-            content: { MyPagingContentView(result: $0) }
-          )
+          LBJPagingMediaBrowser(browser: browser)
           HStack {
             Spacer()
             Button {
@@ -101,7 +73,7 @@ struct ExampleView: View {
             }
             Spacer()
             Button {
-              browser.setCurrentPage(Int.random(in: 0..<browser.medias.count))
+              browser.setCurrentPage(Int.random(in: 0..<browser.dataSource.medias.count))
             } label: {
               Text("Random")
             }
