@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD24885A27C0E8370058A9C6 /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD24885927C0E8370058A9C6 /* LBJMediaBrowser */; };
 		FD70D9F7278E775900986617 /* lebron.gif in Resources */ = {isa = PBXBuildFile; fileRef = FD70D9F6278E775900986617 /* lebron.gif */; };
 		FD749FF52717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD749FF42717E1E70084F832 /* LBJMediaBrowserExamplesApp.swift */; };
 		FD749FF72717E1E70084F832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD749FF62717E1E70084F832 /* ContentView.swift */; };
@@ -29,7 +30,6 @@
 		FDA70D66271D2CFD0058273D /* MyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D65271D2CFD0058273D /* MyMedia.swift */; };
 		FDA70D68271D309F0058273D /* MyGridContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA70D67271D309F0058273D /* MyGridContentView.swift */; };
 		FDBCE36327B89C5D002BFCCC /* View+AsAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBCE36227B89C5D002BFCCC /* View+AsAnyView.swift */; };
-		FDBCE36627B8F716002BFCCC /* LBJMediaBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FDBCE36527B8F716002BFCCC /* LBJMediaBrowser */; };
 		FDD099272787D2680002795F /* curry.gif in Resources */ = {isa = PBXBuildFile; fileRef = FDD099262787D2680002795F /* curry.gif */; };
 		FDDAF9102797A44700E00C11 /* MyMediaGifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAF90F2797A44700E00C11 /* MyMediaGifImage.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDBCE36627B8F716002BFCCC /* LBJMediaBrowser in Frameworks */,
+				FD24885A27C0E8370058A9C6 /* LBJMediaBrowser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 			);
 			name = LBJMediaBrowserExamples;
 			packageProductDependencies = (
-				FDBCE36527B8F716002BFCCC /* LBJMediaBrowser */,
+				FD24885927C0E8370058A9C6 /* LBJMediaBrowser */,
 			);
 			productName = LBJMediaBrowserExamples;
 			productReference = FD749FF12717E1E70084F832 /* LBJMediaBrowserExamples.app */;
@@ -233,7 +233,7 @@
 			);
 			mainGroup = FD749FE82717E1E70084F832;
 			packageReferences = (
-				FDBCE36427B8F716002BFCCC /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
+				FD24885827C0E8370058A9C6 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */,
 			);
 			productRefGroup = FD749FF22717E1E70084F832 /* Products */;
 			projectDirPath = "";
@@ -422,7 +422,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +453,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,7 +491,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FDBCE36427B8F716002BFCCC /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
+		FD24885827C0E8370058A9C6 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lebron1992/LBJMediaBrowser";
 			requirement = {
@@ -502,9 +502,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FDBCE36527B8F716002BFCCC /* LBJMediaBrowser */ = {
+		FD24885927C0E8370058A9C6 /* LBJMediaBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FDBCE36427B8F716002BFCCC /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
+			package = FD24885827C0E8370058A9C6 /* XCRemoteSwiftPackageReference "LBJMediaBrowser" */;
 			productName = LBJMediaBrowser;
 		};
 /* End XCSwiftPackageProductDependency section */

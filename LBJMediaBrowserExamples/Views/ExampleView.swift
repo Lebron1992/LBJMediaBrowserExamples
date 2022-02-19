@@ -33,6 +33,9 @@ struct ExampleView: View {
       case .paging:
         let browser = LBJPagingBrowser(medias: viewModel.medias)
         LBJPagingMediaBrowser(browser: browser)
+          // TODO: if ignores all edges, the internal TabView has UI issue
+          .ignoresSafeArea(.all, edges: .vertical)
+          .background(Color.black)
 
       case .customPaging:
         let browser: LBJPagingBrowser = {
@@ -64,6 +67,7 @@ struct ExampleView: View {
         }()
         VStack {
           LBJPagingMediaBrowser(browser: browser)
+            .background(Color.black)
           HStack {
             Spacer()
             Button {

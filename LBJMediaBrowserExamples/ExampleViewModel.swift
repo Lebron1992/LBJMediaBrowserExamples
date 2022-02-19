@@ -71,6 +71,8 @@ final class ExampleViewModel: ObservableObject {
         let browser = LBJPagingBrowser(dataSource: dataSource, currentPage: page)
         browser.autoPlayVideo = true
         return LBJPagingMediaBrowser(browser: browser)
+          .background(Color.black)
+          .asAnyView()
       }
     )
   }

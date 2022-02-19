@@ -12,6 +12,7 @@ struct ContentView: View {
         }
       }
       .navigationTitle("Examples")
+      .navigationBarTitleDisplayMode(.inline)
     }
   }
 }
